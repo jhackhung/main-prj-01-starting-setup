@@ -11,3 +11,20 @@ export default {
     }
 }
 </script>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: "Titillium Web", sans-serif;
+}
+
+body {
+    margin: 0;
+}
+
+</style>
