@@ -3,11 +3,11 @@
         <h2>Find your Coach</h2>
         <span class="filter-option">
             <input type="checkbox" id="frontend" checked @change="setFilter">
-            <label for="frontend">Frontend</label>
+            <label :class="{ active: filters.frontend }" for="frontend">Frontend</label>
             <input type="checkbox" id="backend" checked @change="setFilter">
-            <label for="backend">Backend</label>
+            <label :class="{ active: filters.backend }" for="backend">Backend</label>
             <input type="checkbox" id="career" checked @change="setFilter">
-            <label for="career">Career</label>
+            <label :class="{ active: filters.career }" for="career">Career</label>
         </span>
     </base-card>
 </template>
@@ -34,7 +34,7 @@ export default {
             };
             this.filters = updatedFilters;
             this.$emit('change-filter', updatedFilters);
-        }
+        },
     }
 }
 </script>
@@ -57,7 +57,7 @@ h2 {
   margin-left: 0.25rem;
 }
 
-.filter-option.active label {
+.filter-option label.active  {
   font-weight: bold;
 }
 </style>
